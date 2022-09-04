@@ -5,11 +5,8 @@ function getComputerChoice() {
     return compOptions[Math.floor(Math.random()*3)];
 }
 
-console.log(getComputerChoice());
-
 function playRound(playerSelection, computerSelection) {
-    return "Test. playerSelection = "+playerSelection+"computerSelection = "+computerSelection;
-
+   
     // same move
     if(playerSelection===computerSelection){
         return 0;
@@ -46,17 +43,17 @@ function game() {
 
     for(let i = 0; i < 5; i++){
         computerSelection = getComputerChoice();
-        //playerSelection = prompt("Rock, paper, scissor?").toLowerCase();
-        playerSelection = "rock";
+        playerSelection = prompt("Rock, paper, scissor?").toLowerCase();
+        // playerSelection = "rock";
         result = playRound(playerSelection,computerSelection);
         
-        p
+        
         if(result==0){
-            console.log(playerSelection+" ties with "+computerSelection());
+            console.log(playerSelection+" ties with "+computerSelection);
         } else if(result==1){
-
+            console.log(playerSelection+" beats "+computerSelection);
         } else {
-
+            console.log(playerSelection+" is beaten by "+computerSelection);
         }
 
         
