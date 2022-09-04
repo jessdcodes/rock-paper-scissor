@@ -15,21 +15,21 @@ function playRound(playerSelection, computerSelection) {
     // Paper and Rock
     if(playerSelection=="paper" && computerSelection=="rock"){
         return 1;
-    } else if (playerSelection=="rock" && computerSelection=="paper"){
+    } if (playerSelection=="rock" && computerSelection=="paper"){
         return -1;
     }
 
     // Rock and Scissor
     if(playerSelection=="rock" && computerSelection=="scissor"){
         return 1;
-    } else if (playerSelection=="scissor" && computerSelection=="rock"){
+    } if (playerSelection=="scissor" && computerSelection=="rock"){
         return -1;
     }
 
     // Scissor and Paper
     if(playerSelection=="scissor" && computerSelection=="paper"){
         return 1;
-    } else if (playerSelection=="paper" && computerSelection=="scissor"){
+    } if (playerSelection=="paper" && computerSelection=="scissor"){
         return -1;
     }
 }
@@ -47,12 +47,12 @@ function game() {
         // playerSelection = "rock";
         result = playRound(playerSelection,computerSelection);
         
-        
-        if(result==0){
+        playerSelection = playerSelection[0].toUpperCase() + playerSelection.substr(1);
+        if(result == 0){
             console.log(playerSelection+" ties with "+computerSelection);
-        } else if(result==1){
+        } else if(result == 1){
             console.log(playerSelection+" beats "+computerSelection);
-        } else {
+        } else if (result == -1){
             console.log(playerSelection+" is beaten by "+computerSelection);
         }
 
