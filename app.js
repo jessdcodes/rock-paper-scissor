@@ -34,29 +34,46 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function gameResult(playerScore, computerScore) {
+    if(playerScore==computerScore){
+        console.log("It's a tie!");
+    } else if(playerScore > computerScore){
+        console.log("You won!");
+    } else {
+        console.log("You lose! Play again.");
+    }
+}
+
 function game() {
     let playerScore = 0;
     let computerScore = 0;
     let computerSelection;
     let playersSelection;
     let result = 0;
+    const noOfRounds = 10;
 
-    for(let i = 0; i < 5; i++){
+    for(let i = 0; i < noOfRounds; i++){
         computerSelection = getComputerChoice();
         playerSelection = prompt("Rock, paper, scissor?").toLowerCase();
         // playerSelection = "rock";
         result = playRound(playerSelection,computerSelection);
         
+        
         playerSelection = playerSelection[0].toUpperCase() + playerSelection.substr(1);
+
         if(result == 0){
             console.log(playerSelection+" ties with "+computerSelection);
         } else if(result == 1){
             console.log(playerSelection+" beats "+computerSelection);
+            playerScore++;
         } else if (result == -1){
             console.log(playerSelection+" is beaten by "+computerSelection);
+            computerScore++;
         }
-
-        
+        console.log("Move: "+(i+1)+" of "+noOfRounds+". Player: "+playerScore+" , Computer: "+computerScore);
+        if(i==(noOfRounds-1)) {
+            gameResult(playerScore, computerScore);
+        }
     }
 }
 
