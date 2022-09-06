@@ -34,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function gameResult(playerScore, computerScore) {
+function getResult(playerScore, computerScore) {
     if(playerScore==computerScore){
         console.log("It's a tie!");
     } else if(playerScore > computerScore){
@@ -72,7 +72,7 @@ function game() {
         }
         console.log("Move: "+(i+1)+" of "+noOfRounds+". Player: "+playerScore+" , Computer: "+computerScore);
         if(i==(noOfRounds-1)) {
-            gameResult(playerScore, computerScore);
+            getResult(playerScore, computerScore);
         }
     }
 }
