@@ -1,0 +1,100 @@
+body{
+    padding-top: 5%;
+    background-color: rgb(22, 20, 20);
+    color: white;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+h1 {
+    color: rgb(0, 255, 255);
+    font-size:62px;
+    margin: 0 auto;
+}
+
+h4 {
+    font-size:32px;
+}
+
+p {
+    font-size:28px;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.selection {
+    height: 50px;   
+}
+
+.selection-img {
+    height: inherit;
+}
+
+
+#player-card, #computer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#computer-card {
+    margin-left: 20px;
+}
+
+.score {
+    margin-top:0;
+}
+
+#weapon-instruction {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: rgb(240, 255, 155);
+}
+
+#game-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.game-img {
+    height: inherit;
+}
+
+#rock-img {
+    height: 100px;
+    
+}
+
+.game-btn {
+    border: none;
+    background-color: rgb(22, 20, 20);
+    height: 120px;
+    margin: 0 10px;
+}
+
+.game-btn:hover {
+    cursor: pointer;
+}
+
+#icon-credits {
+    color: white;
+    text-decoration:none;
+    font-size: 12px;
+}
+
+#icon-credits:hover {
+    color:aquamarine;
+    
+}
+
+footer {
+    margin: 70px auto 40px auto;
+    color: white;
+}
+

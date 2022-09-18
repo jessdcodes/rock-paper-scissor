@@ -1,6 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="app.js"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+        <!-- styles -->
+        <link rel="stylesheet" href="styles.css">
+        
     </head>
+    <body>
+        <header id="header">
+            <h1>ROCK, PAPER AND SCISSORS</h1>
+            <h4 id="roundResult">First to 5 wins!</h4>
+        </header>
+        <main id="main">
+            <div id="scoreboard">
+                <div id="player-card" class="scorecard">
+                    <div id="player-selection" class="selection">
+                        <img id="player-img" class="selection-img" href="#">
+                    </div>
+                    <p>PLAYER</p>
+                    <p id="player-score" class="score">0</p>
+                    
+                </div>
+                <div id="computer-card" class="scorecard">
+                    <div id="computer-selection" class="selection">
+                        <img id="computer-img" class="selection-img" href="#">
+                    </div>
+                        <p>COMPUTER</p>
+                        <p id="computer-score" class="score">0</p>
+                </div>
+            </div>
+            <div id="game-container">
+                <p id="weapon-instruction"><i>Select your weapon</i></p>
+                <div id="game-buttons">
+                    <button class="game-btn" id="rock">
+                        <img class="game-img" id="rock-img" src="images/rock.png">
+                    </button>
+                    <button class="game-btn" id="paper">
+                        <img class="game-img" id="paper-img" src="images/paper.png">
+                    </button>
+                    <button class="game-btn" id="scissors">
+                        <img class="game-img" id="scissors-img" src="images/scissors.png">
+                    </button>
+                </div>
+            </div>
+           
+        </main>
+        <footer>
+            <a id="icon-credits" href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Freepik - Flaticon</a>
+        </footer>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
 </html>
